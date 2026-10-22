@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:background="@color/primary" android:padding="24dp">
+        <LinearLayout
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_toStartOf="@+id/btnLogout" android:orientation="vertical">
+            <TextView
+                android:id="@+id/tvHalo" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:textColor="@color/white"
+                android:textSize="22sp" android:textStyle="bold" />
+            <TextView
+                android:id="@+id/tvTanggal" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:layout_marginTop="4dp"
+                android:textColor="#DCE8FA" android:textSize="14sp" />
+            <TextView
+                android:id="@+id/tvJam" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:layout_marginTop="8dp"
+                android:textColor="@color/white" android:textSize="28sp" android:textStyle="bold" />
+            <TextView
+                android:id="@+id/tvStatus" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:layout_marginTop="4dp"
+                android:textColor="#DCE8FA" android:textSize="14sp" />
+        </LinearLayout>
+        <ImageButton
+            android:id="@+id/btnLogout" android:layout_width="44dp" android:layout_height="44dp"
+            android:layout_alignParentEnd="true" android:background="?selectableItemBackgroundBorderless"
+            android:contentDescription="Keluar akun" android:src="@drawable/ic_power"
+            app:tint="@color/white" />
+    </RelativeLayout>
+
+    <GridLayout
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:columnCount="2" android:padding="12dp">
+
+        <TextView
+            android:id="@+id/tvJamKerja" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_columnSpan="2"
+            android:layout_marginStart="8dp" android:layout_marginEnd="8dp"
+            android:layout_marginBottom="2dp" android:textColor="@color/text_secondary"
+            android:textSize="13sp" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardMasuk"
+            android:layout_width="0dp" android:layout_height="160dp"
+            android:layout_columnWeight="1" android:layout_margin="8dp"
+            android:clickable="true" android:focusable="true"
+            app:cardCornerRadius="16dp" app:cardElevation="2dp">
+            <LinearLayout
+                android:layout_width="match_parent" android:layout_height="match_parent"
+                android:gravity="center" android:orientation="vertical" android:padding="8dp">
+                <ImageView
+                    android:layout_width="44dp" android:layout_height="44dp"
+                    android:src="@drawable/ic_masuk" app:tint="@color/primary" />
+                <TextView
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp" android:text="Absen Masuk"
+                    android:textSize="16sp" android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/tvKetMasuk" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:layout_marginTop="4dp"
+                    android:gravity="center" android:maxLines="2" android:textSize="12sp"
+                    android:textColor="@color/text_secondary" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardKeluar"
+            android:layout_width="0dp" android:layout_height="160dp"
+            android:layout_columnWeight="1" android:layout_margin="8dp"
+            android:clickable="true" android:focusable="true"
+            app:cardCornerRadius="16dp" app:cardElevation="2dp">
+            <LinearLayout
+                android:layout_width="match_parent" android:layout_height="match_parent"
+                android:gravity="center" android:orientation="vertical" android:padding="8dp">
+                <ImageView
+                    android:layout_width="44dp" android:layout_height="44dp"
+                    android:src="@drawable/ic_keluar" app:tint="@color/primary" />
+                <TextView
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp" android:text="Absen Keluar"
+                    android:textSize="16sp" android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/tvKetKeluar" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:layout_marginTop="4dp"
+                    android:gravity="center" android:maxLines="2" android:textSize="12sp"
+                    android:textColor="@color/text_secondary" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardIzin"
+            android:layout_width="0dp" android:layout_height="160dp"
+            android:layout_columnWeight="1" android:layout_margin="8dp"
+            android:clickable="true" android:focusable="true"
+            app:cardCornerRadius="16dp" app:cardElevation="2dp">
+            <LinearLayout
+                android:layout_width="match_parent" android:layout_height="match_parent"
+                android:gravity="center" android:orientation="vertical" android:padding="8dp">
+                <ImageView
+                    android:layout_width="44dp" android:layout_height="44dp"
+                    android:src="@drawable/ic_izin" app:tint="@color/primary" />
+                <TextView
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp" android:text="Izin"
+                    android:textSize="16sp" android:textStyle="bold" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardRiwayat"
+            android:layout_width="0dp" android:layout_height="160dp"
+            android:layout_columnWeight="1" android:layout_margin="8dp"
+            android:clickable="true" android:focusable="true"
+            app:cardCornerRadius="16dp" app:cardElevation="2dp">
+            <LinearLayout
+                android:layout_width="match_parent" android:layout_height="match_parent"
+                android:gravity="center" android:orientation="vertical" android:padding="8dp">
+                <ImageView
+                    android:layout_width="44dp" android:layout_height="44dp"
+                    android:src="@drawable/ic_history" app:tint="@color/primary" />
+                <TextView
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp" android:text="Riwayat"
+                    android:textSize="16sp" android:textStyle="bold" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+    </GridLayout>
+</LinearLayout>

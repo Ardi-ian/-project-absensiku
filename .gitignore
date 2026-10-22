@@ -1,0 +1,13 @@
+*.iml
+.gradle
+/local.properties
+/.idea
+/build
+/app/build
+.DS_Store
+hs_err_pid*.log
+replay_pid*.log
+local.properties
+.gradle/
+build/
+.idea/
